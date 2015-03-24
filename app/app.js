@@ -13,4 +13,20 @@ var App = Ember.Application.extend({
 
 loadInitializers(App, config.modulePrefix);
 
+App.ApplicationRoute = Ember.Route.extend({
+
+    setupController: function(controller){
+        alert('hi');
+        controller.set('title',"Krishna");
+    }
+});
+
+//export App.ApplicationRoute;
+
+App.ApplicationController = Ember.Controller.extend({
+    appName: 'my first example'
+});
+
+//export App.ApplicationController;
 export default App;
+
